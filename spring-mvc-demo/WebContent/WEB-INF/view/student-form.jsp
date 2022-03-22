@@ -13,20 +13,30 @@
 	
 		<label>First name :</label>
 		<form:input path="firstname"/>
-		<br/>
+		<br/><br/>
 		
 		<label>Last name :</label>
 		<form:input path="lastname"/>
-		<br/>
+		<br/><br/>
 		
 		<label>Country :</label>
 		<form:select path="country">
-			<form:option value="Morocco" label="Morocco" />
-			<form:option value="France" label="France" />
-			<form:option value="Germany" label="Germany" />
-			<form:option value="Italia" label="Italia" />
+			<form:options items="${ student.countryOptions }"/>
 		</form:select>
-		<br/>
+		<br/><br/>
+		
+		<label>Favorite language :</label>
+			Java <form:radiobutton path="favoriteLanguage" value="JAVA"/>
+			C# <form:radiobutton path="favoriteLanguage" value="C#"/>
+			PHP <form:radiobutton path="favoriteLanguage" value="PHP"/>
+			Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>
+		<br/><br/>
+		
+		<label>Operating systems :</label>
+			Linux <form:checkbox path="operatingSystems" value="Linux"/>
+			Windows <form:checkbox path="operatingSystems" value="Windows"/>
+			Mac OS X <form:checkbox path="operatingSystems" value="Mac OSX"/>
+		<br/><br/>
 		
 		<input type="submit">
 		
